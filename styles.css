@@ -1,0 +1,11 @@
+
+.cell {
+    height: 30px;
+    width: 30px; 
+    border-style: dotted;
+}
+
+#container {
+    display: flex;
+    margin: 200px;
+}
