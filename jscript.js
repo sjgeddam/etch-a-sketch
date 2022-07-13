@@ -1,7 +1,7 @@
-function createGrid() {
-    for (let i = 0; i < 16; i++) {
+function createGrid(dimension) {
+    for (let i = 0; i < dimension; i++) {
         let row = document.createElement('div');
-        for (let j = 0; j < 16; j++) {
+        for (let j = 0; j < dimension; j++) {
             let cell = document.createElement('div');
             cell.classList.add('cell');
             row.appendChild(cell);
@@ -19,10 +19,25 @@ function changeColor() {
     }
 }
 
+
+function clearGrid() {
+    const clearB = document.querySelector('#clear');
+    const cells = document.querySelectorAll('.cell');
+    clearB.addEventListener('click', () => {
+        for (let i = 0; i < cells.length; i++) {
+            cells[i].classList.remove('fill');
+        }
+    });
+}
+
 const button = document.querySelector('button');
+button.style.color = '#e56b6f';
 button.addEventListener('click', () => {
-    let answ = prompt("Please enter n where n = nxn grid");
+    let answ = prompt("Please enter n where n = n x n grid.");
+    createGrid(answ);
+    changeColor();
 });
 
-createGrid();
+createGrid(16);
 changeColor();
+clearGrid();
