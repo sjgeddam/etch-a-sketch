@@ -5,6 +5,11 @@
     border-style: dotted;
 }
 
+.fill {
+    color: red;
+    background-color: blue;
+}
+
 #container {
     display: flex;
     margin: 200px;
