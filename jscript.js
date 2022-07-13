@@ -30,12 +30,21 @@ function clearGrid() {
     });
 }
 
+function removeGrid() {
+    const container = document.querySelector('#container');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
 const button = document.querySelector('button');
 button.style.color = '#e56b6f';
 button.addEventListener('click', () => {
     let answ = prompt("Please enter n where n = n x n grid.");
+    removeGrid();
     createGrid(answ);
     changeColor();
+    clearGrid(); 
 });
 
 createGrid(16);

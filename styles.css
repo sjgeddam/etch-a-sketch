@@ -1,7 +1,9 @@
-.cell {
-    height: 30px;
-    width: 30px; 
+.cell { 
+    display: flex;
+    width: 20px;
+    height: 20px;
     border-style: dotted;
+    flex: 1;
 }
 
 .fill {
@@ -9,9 +11,18 @@
     background-color: #b56576;
 }
 
+.bandw {
+    color: black;
+    background-color: whitesmoke;
+}
+
 #container {
+    margin-top: 50px;
     display: flex;
-    margin: 50px;
+    justify-content: center;
+    align-items: stretch;
+    width: 650px;
+    height: 650px;
 }
 
 h1, h2, #page, #buttons {
